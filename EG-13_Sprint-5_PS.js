@@ -71,4 +71,34 @@ var searchInsert = function (nums, target) {
 
 
 
-console.log(searchInsert([1, 3, 5, 6], target = 5));
+// console.log(searchInsert([1, 3, 5, 6], target = 5));
+
+
+
+
+
+// problem-4
+
+
+
+/**
+ * @param {TreeNode} root
+ * @return {number}
+ */
+var maxDepth = function(root) {
+
+    // If there is no node
+    if (root === null) {
+        return 0;
+    }
+
+    
+    let leftDepth = maxDepth(root.left);
+    let rightDepth = maxDepth(root.right);
+
+    return Math.max(leftDepth, rightDepth) + 1;
+};
+
+
+
+console.log(maxDepth([3,9,20,null,null,15,7]));
