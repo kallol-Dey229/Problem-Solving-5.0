@@ -185,3 +185,53 @@ var rotate = function(nums, k) {
 
 
 // console.log(rotate([1, 2, 3, 4, 5, 6, 7], 3));
+
+
+
+
+
+// problem-8
+
+
+var MinStack = function() {
+    this.stack = [];
+};
+
+/**
+ * @param {number} val
+ * @return {void}
+ */
+MinStack.prototype.push = function(val) {
+    this.stack.push(val);
+};
+
+/**
+ * @return {void}
+ */
+MinStack.prototype.pop = function() {
+    this.stack.pop();
+};
+
+/**
+ * @return {number}
+ */
+MinStack.prototype.top = function() {
+    return this.stack[this.stack.length - 1];
+};
+
+/**
+ * @return {number}
+ */
+MinStack.prototype.getMin = function() {
+    let min = this.stack[0];
+
+    for (let i = 1; i < this.stack.length; i++) {
+        if (this.stack[i] < min) {
+            min = this.stack[i];
+        }
+    }
+
+    return min;
+};
+
+
