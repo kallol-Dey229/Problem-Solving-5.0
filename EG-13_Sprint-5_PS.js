@@ -163,3 +163,25 @@ var productExceptSelf = function(nums) {
 };
 
 // console.log(productExceptSelf([1, 2, 3, 4]));
+
+
+
+// problem-7
+
+
+/**
+ * @param {number[]} nums
+ * @param {number} k
+ * @return {void}
+ */
+var rotate = function(nums, k) {
+
+    for (let i = 0; i < k; i++) {
+        let last = nums.pop();
+        nums.unshift(last);
+    }
+};
+
+
+
+// console.log(rotate([1, 2, 3, 4, 5, 6, 7], 3));
