@@ -130,3 +130,36 @@ var invertTree = function(root) {
 
 
 // console.log(invertTree([4,2,7,1,3,6,9]));
+
+
+
+
+// problem-6
+
+
+/**
+ * @param {number[]} nums
+ * @return {number[]}
+ */
+var productExceptSelf = function(nums) {
+
+    let result = [];
+
+    for (let i = 0; i < nums.length; i++) {
+
+        let product = 1;
+
+        for (let j = 0; j < nums.length; j++) {
+
+            if (i !== j) {
+                product = product * nums[j];
+            }
+        }
+
+        result.push(product);
+    }
+
+    return result;
+};
+
+// console.log(productExceptSelf([1, 2, 3, 4]));
